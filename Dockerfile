@@ -12,7 +12,7 @@ RUN useradd -m shelluser && \
     echo 'shelluser:password' | chpasswd
 
 # 暴露 Shellinabox 默认端口
-EXPOSE 4200
+EXPOSE 22
 
 # 启动 Shellinabox，使用 -t 参数禁用SSL，-s 参数指定服务
 CMD ["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]
